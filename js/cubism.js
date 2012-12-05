@@ -88,7 +88,8 @@ App.Cubism = Ember.Object.create({
       { metrics: this.metrics("jvm.mem.heap_used_in_bytes"),     colors: 'Blues'    },
       { metrics: this.metrics("http.current_open"),              colors: 'Oranges'  },
       { metrics: this.metrics("indices.indexing.index_current"), colors: 'Spectral' },
-      { metrics: this.metrics("indices.search.query_current"),   colors: 'YlOrRd'   }
+      { metrics: this.metrics("indices.search.query_current"),   colors: 'YlOrRd'   },
+      { metrics: this.metrics("process.open_file_descriptors"),  colors: 'Oranges'  }
     ].forEach(
         function(group) { self.add_chart(group.metrics, {colors: group.colors}) }
     )
